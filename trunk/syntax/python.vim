@@ -79,7 +79,7 @@ syn match   pythonRun		"\%^#!.*$"
 syn match   pythonCoding	"\%^.*\(\n.*\)\?#.*coding[:=]\s*[0-9A-Za-z-_.]\+.*$"
 syn keyword pythonTodo		TODO FIXME XXX contained
 
-" Erroneous characters that cannont be in a python program
+" Erroneous characters that cannot be in a python program
 syn match pythonError		"[@$?]" display
 
 " Mixing spaces and tabs also may be used for pretty formatting multiline
@@ -219,7 +219,9 @@ if version >= 508 || !exists("did_python_syn_inits")
   HiLink pythonTodo		Todo
 
   HiLink pythonError		Error
-  HiLink pythonIndentError	Error
+  if exists("python_highlight_indent_errors") && python_highlight_indent_errors != 0
+    HiLink pythonIndentError	Error
+  endif
 
   HiLink pythonString		String
   HiLink pythonUniString	String

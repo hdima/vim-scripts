@@ -2,9 +2,9 @@
 " Language:	Python
 " Maintainer:	Dmitry Vasiliev <dima@hlabs.spb.ru>
 " URL:		http://www.hlabs.spb.ru/vim/python.vim
-" Last Change:	$Date: 2003/10/18 17:01:43 $
+" Last Change:	$LastChangedDate$
 " Filenames:	*.py
-" $Id$
+" $LastChangedRevision$
 "
 " Based on python.vim (from Vim 6.1 distribution)
 " by Neil Schemenauer <nas@python.ca>

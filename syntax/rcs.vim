@@ -2,9 +2,9 @@
 " Language:	RCS file
 " Maintainer:	Dmitry Vasiliev <dima@hlabs.spb.ru>
 " URL:		http://www.hlabs.spb.ru/vim/rcs.vim
-" Last Change:	$Date: 2003/04/01 14:05:42 $
+" Last Change:	$LastChangedDate$
 " Filenames:	*,v
-" $Id$
+" $LastChangedRevision$
 "
 " Options:
 " rcs_folding = 1		For folding strings

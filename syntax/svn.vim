@@ -2,8 +2,8 @@
 " Language:	Subversion (svn) commit file
 " Maintainer:	Dmitry Vasiliev <dima@hlabs.spb.ru>
 " URL:		http://www.hlabs.spb.ru/vim/svn.vim
-" Last Change:	$Date: 2003/06/10 11:55:20 $
-" $Id$
+" Last Change:	$LastChangedDate$
+" $LastChangedRevision$
 
 " For version 5.x: Clear all syntax items.
 " For version 6.x: Quit when a syntax file was already loaded.

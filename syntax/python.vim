@@ -4,7 +4,7 @@
 " URL:		http://www.hlabs.spb.ru/vim/python.vim
 " Last Change:	$Date: 2003/10/18 17:01:43 $
 " Filenames:	*.py
-" $Revision: 1.20 $
+" $Id$
 "
 " Based on python.vim (from Vim 6.1 distribution)
 " by Neil Schemenauer <nas@python.ca>

@@ -4,7 +4,7 @@
 " URL:		http://www.hlabs.spb.ru/vim/rcs.vim
 " Last Change:	$Date: 2003/04/01 14:05:42 $
 " Filenames:	*,v
-" $Revision: 1.10 $
+" $Id$
 "
 " Options:
 " rcs_folding = 1		For folding strings

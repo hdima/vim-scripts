@@ -1,5 +1,6 @@
 " VIM 6.x configuration file
 " Dmitry Vasiliev (dima@hlabs.spb.ru)
+" $Id$
 "
 
 " It's not vi

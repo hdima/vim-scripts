@@ -1,49 +1,25 @@
-" VIM 6.x configuration file
-" Dmitry Vasiliev <dima@hlabs.spb.ru>
-" $Id$
-"
+" VIM 7 configuration file
+" Maintainer:   Dmitry Vasiliev <dima@hlabs.spb.ru>
+" URL:          http://hlabs.spb.ru/vim/recipes.html
+" Last Change:  2008-12-30
+" Version:      0.2
 
-" It's not vi
+" Not compatible with Vi
 set nocompatible
 
-" Some stuff for gui
+" GUI options
 if has("gui")
-    " Scrollbars is good for gui
-    set guioptions+=b
-    " Do you need the toolbar?
+    set guioptions+=abghr
     set guioptions-=T
 
-    " set cmdheight=2
+    set guipty
 
-    set guifont=-adobe-courier-medium-r-normal-*-*-120-*-*-m-*-microsoft-cp1251
-    " set guifont=courier_new_cyr:h7
-    " set guifont=Lucida_Console:h10:cRUSSIAN
-
-    " My GUI colors
-    set background=light
-
-    if &background == "dark"
-        hi Normal guifg=grey87 guibg=black
-        hi Visual gui=italic guifg=black guibg=grey75
-    else
-        hi Normal guifg=Black guibg=Grey80
-        hi Visual gui=italic guifg=Brown guibg=Grey90
-        hi StatusLine gui=bold,italic guifg=Brown guibg=Grey90
-        hi StatusLineNC gui=italic guifg=Brown guibg=Grey85
-        hi VertSplit gui=italic guifg=Brown guibg=Grey85
-        hi WildMenu gui=bold,italic
-        " Modification flag color
-        hi User1 gui=bold,italic guifg=Yellow guibg=Red
-    endif
-
+    set columns=80
     set lines=50
 endif
 
-" Python syntax options
-let python_highlight_all = 1
-
 " Automatically insert comment character if we need to
-set formatoptions=tcroq
+set formatoptions+=ntcroq2
 
 " Highlight and autocomplete search
 set hlsearch
@@ -61,7 +37,8 @@ set nojoinspaces
 " Some information is always good 
 set showfulltag
 set report=0
-set shortmess=at
+set shortmess-=aI
+set shortmess+=T
 
 set wildmenu
 set laststatus=2
@@ -77,17 +54,39 @@ set sidescrolloff=5
 " set scrolloff=999
 set sidescroll=15
 
-" Map keys for CP1251
-" set langmap=ÉQ,ÖW,ÓE,ÊR,ÅT,ÍY,ÃU,ØI,ÙO,ÇP,Õ{,Ú},ÔA,ÛS,ÂD,ÀF,ÏG
-" set langmap+=ÐH,ÎJ,ËK,ÄL,Æ:,Ý\",ßZ,×X,ÑC,ÌV,ÈB,ÒN,ÜM,Á<,Þ>
-" set langmap+=éq,öw,óe,êr,åt,íy,ãu,øi,ùo,çp,õ[,ú],ôa,ûs,âd,àf,ïg
-" set langmap+=ðh,îj,ëk,äl,æ\\;,ý',ÿz,÷x,ñc,ìv,èb,òn,üm,á\,,þ.
-
-" Map keys for KOI8-R
-" set langmap=êQ,ãW,õE,ëR,åT,îY,çU,ûI,ýO,úP,è{,æA,ùS,÷D,áF,ðG
-" set langmap+=òH,ïJ,ìK,äL,ö:,ü\",ñZ,þX,óC,íV,éB,ôN,øM,â<,à>
-" set langmap+=Êq,Ãw,Õe,Ër,Åt,Îy,Çu,Ûi,Ýo,Úp,È[,Æa,Ùs,×d,Áf,Ðg
-" set langmap+=Òh,Ïj,Ìk,Äl,Ö\\;,Ü',Ñz,Þx,Óc,Ív,Éb,Ôn,Øm,Â\,,À.
+" Key mapping for Russian QWERTY keyboard in UTF-8
+map Ð¹ q
+map Ñ† w
+map Ñƒ e
+map Ðº r
+map Ðµ t
+map Ð½ y
+map Ð³ u
+map Ñˆ i
+map Ñ‰ o
+map Ð· p
+map Ñ… [
+map ÑŠ ]
+map Ñ„ a
+map Ñ‹ s
+map Ð² d
+map Ð° f
+map Ð¿ g
+map Ñ€ h
+map Ð¾ j
+map Ð» k
+map Ð´ l
+map Ð¶ ;
+map Ñ '
+map Ñ z
+map Ñ‡ x
+map Ñ c
+map Ð¼ v
+map Ð¸ b
+map Ñ‚ n
+map ÑŒ m
+map Ð± ,
+map ÑŽ .
 
 " Nice :list or :set list
 set listchars=tab:>-,trail:.,extends:+,eol:$,precedes:+
@@ -97,10 +96,7 @@ set fillchars="vert: ,fold:-"
 " Fold options
 " set foldcolumn=4
 " set columns=84
-" I'm not sure about that...
-" set foldnestmax=3
-" set foldmethod=indent
-set foldmethod=syntax
+set nofoldenable
 
 " Diff options
 set diffopt=filler,context:3
@@ -109,7 +105,7 @@ set diffopt=filler,context:3
 set history=2000
 set viminfo='200,h,%
 " Don't save options to session file - it's possibly buggy
-set sessionoptions=buffers,winsize,help,blank,slash,unix
+set sessionoptions-=options
 
 " Pretty select with mouse and shifted special keys
 behave mswin
@@ -124,6 +120,14 @@ filetype plugin indent on
 
 " It's not an MS Word clone
 set secure
+
+set fileencodings=ucs-bom,utf-8,cp1251,default,latin1
+
+" Color scheme
+color desert
+
+" Python syntax options
+let python_highlight_all = 1
 
 " Indent commands
 com SpaceIndent :set tabstop=4| set shiftwidth=4| set expandtab

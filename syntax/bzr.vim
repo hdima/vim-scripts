@@ -4,7 +4,7 @@
 " URL:          http://www.hlabs.spb.ru/vim/bzr.vim
 " Last Change:  2009-01-26
 " Filenames:    bzr_log.*
-" Version:      1.2
+" Version:      1.2.1
 "
 " Thanks:
 "
@@ -50,7 +50,6 @@ if version >= 508 || !exists("did_bzr_syn_inits")
     command -nargs=+ HiLink hi def link <args>
   endif
 
-  HiLink bzrRegion     Comment
   HiLink bzrRemoved    Constant
   HiLink bzrAdded      Identifier
   HiLink bzrModified   Special

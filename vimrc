@@ -12,11 +12,25 @@ if has("gui")
     set guioptions+=abghr
     set guioptions-=T
 
+    set gfn=DejaVu\ Sans\ Mono\ 9
+    "set gfn=Liberation\ Mono\ 9
+
     set guipty
 
-    set columns=80
-    set lines=50
+    set columns=175
+    "set lines=999
+    set lines=64
 endif
+
+" Disable pasting text on mouse middle button click
+map <MiddleMouse> <Nop>
+imap <MiddleMouse> <Nop>
+map <2-MiddleMouse> <Nop>
+imap <2-MiddleMouse> <Nop>
+map <3-MiddleMouse> <Nop>
+imap <3-MiddleMouse> <Nop>
+map <4-MiddleMouse> <Nop>
+imap <4-MiddleMouse> <Nop>
 
 " Automatically insert comment character if we need to
 set formatoptions+=ntcroq2
@@ -48,8 +62,8 @@ set helpheight=12
 set winminheight=0
 
 " I want to see some context around
-set scrolloff=2
-set sidescrolloff=5
+set scrolloff=0
+set sidescrolloff=0
 " ...and maybe even all around
 " set scrolloff=999
 set sidescroll=15
@@ -94,8 +108,9 @@ set listchars=tab:>-,trail:.,extends:+,eol:$,precedes:+
 set fillchars="vert: ,fold:-"
 
 " Fold options
-" set foldcolumn=4
-" set columns=84
+set foldcolumn=0
+set foldmethod=syntax
+set foldnestmax=2
 set nofoldenable
 
 " Diff options
@@ -113,10 +128,19 @@ behave mswin
 set keymodel-=stopsel
 set selection=inclusive
 
+set number
+set numberwidth=4
+
+set wildignore=*.swp,*.swo,*.beam,*.pyc,*.*~
+
+set nobackup
+set noswapfile
+
 " Highlight syntax
 syntax on
 
-filetype plugin indent on
+filetype plugin on
+filetype indent off
 
 " It's not an MS Word clone
 set secure
@@ -124,7 +148,9 @@ set secure
 set fileencodings=ucs-bom,utf-8,cp1251,default,latin1
 
 " Color scheme
-color desert
+" color desert
+set background=dark
+color solarized
 
 " Python syntax options
 let python_highlight_all = 1
@@ -133,3 +159,7 @@ let python_highlight_all = 1
 com SpaceIndent :set tabstop=4| set shiftwidth=4| set expandtab
 com TabIndent :set tabstop=8| set shiftwidth=8| set noexpandtab
 SpaceIndent
+
+set tags+=~/erlang-tags
+
+vsplit

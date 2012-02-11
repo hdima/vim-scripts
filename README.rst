@@ -1,8 +1,19 @@
 Misc Vim scripts
 ================
 
+Misc scripts for `Vim text editor <http://www.vim.org>`_.
+
+Vim configuration file
+----------------------
+
 - `vimrc <https://github.com/hdima/vim-scripts/blob/master/vimrc>`_ - Vim
   configuration file
+
+Vim syntax highlighting scripts
+-------------------------------
+
+These scripts also included in the Vim distribution.
+
 - `syntax/bzr.vim <https://github.com/hdima/vim-scripts/blob/master/syntax/bzr.vim>`_
   - Vim syntax highlighting for `Bazaar <http://bazaar.canonical.com>`_
   commit file
@@ -12,6 +23,13 @@ Misc Vim scripts
 - `syntax/svn.vim <https://github.com/hdima/vim-scripts/blob/master/syntax/svn.vim>`_
   - Vim syntax highlighting for `Subversion <http://subversion.apache.org/>`_
   commit file
+
+Vim syntax highlighting script for Python
+-----------------------------------------
+
+Enhanced version of the original Python syntax highlighting script. See also
+`python.vim page on vim.org <http://www.vim.org/scripts/script.php?script_id=790>`_.
+
 - `syntax/python/python.vim <https://github.com/hdima/vim-scripts/blob/master/syntax/python/python.vim>`_
   - Vim syntax highlighting for `Python <http://python.org>`_ 2.\*
 - `syntax/python/python3.0..vim <https://github.com/hdima/vim-scripts/blob/master/syntax/python/python3.0.vim>`_

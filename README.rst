@@ -32,5 +32,5 @@ Enhanced version of the original Python syntax highlighting script. See also
 
 - `syntax/python/python.vim <https://github.com/hdima/vim-scripts/blob/master/syntax/python/python.vim>`_
   - Vim syntax highlighting for `Python <http://python.org>`_ 2.\*
-- `syntax/python/python3.0..vim <https://github.com/hdima/vim-scripts/blob/master/syntax/python/python3.0.vim>`_
+- `syntax/python/python3.0.vim <https://github.com/hdima/vim-scripts/blob/master/syntax/python/python3.0.vim>`_
   - Vim syntax highlighting for `Python <http://python.org>`_ 3.\*

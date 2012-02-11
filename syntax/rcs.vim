@@ -1,10 +1,10 @@
 " Vim syntax file
 " Language:     RCS file
-" Maintainer:   Dmitry Vasiliev <dima at hlabs dot spb dot ru>
-" URL:          http://www.hlabs.spb.ru/vim/rcs.vim
-" Revision:     $Id$
+" Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
+" URL:          https://github.com/hdima/vim-scripts/blob/master/syntax/rcs.vim
+" Last Change:  2012-02-11
 " Filenames:    *,v
-" Version:      1.11
+" Version:      1.12
 
 " Options:
 "   rcs_folding = 1   For folding strings

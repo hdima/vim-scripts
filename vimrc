@@ -1,8 +1,8 @@
 " VIM 7 configuration file
-" Maintainer:   Dmitry Vasiliev <dima@hlabs.spb.ru>
-" URL:          http://hlabs.spb.ru/vim/recipes.html
-" Last Change:  2008-12-30
-" Version:      0.2
+" Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
+" URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
+" Last Change:  2012-02-11
+" Version:      0.3
 
 " Not compatible with Vi
 set nocompatible

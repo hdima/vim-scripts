@@ -2,7 +2,7 @@
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
 " Last Change:  2012-02-12
-" Version:      0.4
+" Version:      0.5
 
 " Not compatible with Vi
 set nocompatible
@@ -99,12 +99,6 @@ set nobackup
 " Turn off swap files
 set updatecount=0
 
-" Highlight syntax
-syntax on
-
-filetype plugin on
-filetype indent off
-
 " It's not an MS Word clone
 set secure
 
@@ -112,6 +106,9 @@ set fileencodings=ucs-bom,utf-8,cp1251,default,latin1
 
 " Color scheme
 color peachpuff
+
+" Highlight syntax
+syntax enable
 
 " Python syntax options
 let python_highlight_all = 1

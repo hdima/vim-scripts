@@ -2,7 +2,7 @@
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
 " Last Change:  2012-02-12
-" Version:      0.6
+" Version:      0.7
 
 " Not compatible with Vi
 set nocompatible
@@ -73,7 +73,7 @@ set nofoldenable
 " Diff options
 set diffopt=filler,context:3
 
-set virtualedit=all
+set virtualedit=block
 
 " Always save some info for next time
 set history=100

@@ -2,7 +2,7 @@
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
 " Last Change:  2012-02-12
-" Version:      0.5
+" Version:      0.6
 
 " Not compatible with Vi
 set nocompatible
@@ -32,7 +32,6 @@ endif
 
 " Automatically insert comment character if we need to
 set formatoptions+=ntcroq21
-set textwidth=79
 
 " Highlight and autocomplete search
 set hlsearch

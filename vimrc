@@ -1,39 +1,38 @@
 " VIM 7 configuration file
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
-" Last Change:  2012-02-11
-" Version:      0.3
+" Last Change:  2012-02-12
+" Version:      0.4
 
 " Not compatible with Vi
 set nocompatible
 
 " GUI options
-if has("gui")
-    set guioptions+=abghr
-    set guioptions-=T
+if has("gui_running")
+    " Make gvim looks more like vim
+    set guioptions+=acghiM
+    set guioptions-=e
+    set guioptions-=mrLtT
 
-    set gfn=DejaVu\ Sans\ Mono\ 9
-    "set gfn=Liberation\ Mono\ 9
+    set guifont=DejaVu\ Sans\ Mono\ 9
 
-    set guipty
+    " Disable pasting text on mouse middle button click
+    map <MiddleMouse> <Nop>
+    imap <MiddleMouse> <Nop>
+    map <2-MiddleMouse> <Nop>
+    imap <2-MiddleMouse> <Nop>
+    map <3-MiddleMouse> <Nop>
+    imap <3-MiddleMouse> <Nop>
+    map <4-MiddleMouse> <Nop>
+    imap <4-MiddleMouse> <Nop>
 
-    set columns=175
-    "set lines=999
-    set lines=64
+    set columns=169
+    set lines=999
 endif
 
-" Disable pasting text on mouse middle button click
-map <MiddleMouse> <Nop>
-imap <MiddleMouse> <Nop>
-map <2-MiddleMouse> <Nop>
-imap <2-MiddleMouse> <Nop>
-map <3-MiddleMouse> <Nop>
-imap <3-MiddleMouse> <Nop>
-map <4-MiddleMouse> <Nop>
-imap <4-MiddleMouse> <Nop>
-
 " Automatically insert comment character if we need to
-set formatoptions+=ntcroq2
+set formatoptions+=ntcroq21
+set textwidth=79
 
 " Highlight and autocomplete search
 set hlsearch
@@ -51,74 +50,36 @@ set nojoinspaces
 " Some information is always good 
 set showfulltag
 set report=0
-set shortmess-=aI
-set shortmess+=T
-
+set shortmess+=asWAI
+set showtabline=0
 set wildmenu
 set laststatus=2
-set statusline=%<%f\ [%Y%R%W]%1*%{(&modified)?'\ [+]\ ':''}%*%=%c%V,%l\ %P\ [%n]
+set statusline=%f%=\ %Y\ %c%V,%l/%L\ [%M%n%W]:%{tabpagenr()}
 
 set helpheight=12
 set winminheight=0
 
-" I want to see some context around
-set scrolloff=0
-set sidescrolloff=0
-" ...and maybe even all around
-" set scrolloff=999
 set sidescroll=15
 
-" Key mapping for Russian QWERTY keyboard in UTF-8
-map й q
-map ц w
-map у e
-map к r
-map е t
-map н y
-map г u
-map ш i
-map щ o
-map з p
-map х [
-map ъ ]
-map ф a
-map ы s
-map в d
-map а f
-map п g
-map р h
-map о j
-map л k
-map д l
-map ж ;
-map э '
-map я z
-map ч x
-map с c
-map м v
-map и b
-map т n
-map ь m
-map б ,
-map ю .
-
-" Nice :list or :set list
+" Nice :list and :set list
 set listchars=tab:>-,trail:.,extends:+,eol:$,precedes:+
 
-set fillchars="vert: ,fold:-"
+set fillchars="vert: ,fold: "
 
 " Fold options
-set foldcolumn=0
 set foldmethod=syntax
-set foldnestmax=2
+set foldnestmax=1
 set nofoldenable
 
 " Diff options
 set diffopt=filler,context:3
 
+set virtualedit=all
+
 " Always save some info for next time
-set history=2000
-set viminfo='200,h,%
+set history=100
+set viminfo='100,h,%
+set sessionoptions+=winpos
 " Don't save options to session file - it's possibly buggy
 set sessionoptions-=options
 
@@ -133,8 +94,10 @@ set numberwidth=4
 
 set wildignore=*.swp,*.swo,*.beam,*.pyc,*.*~
 
+" Turn off backup files
 set nobackup
-set noswapfile
+" Turn off swap files
+set updatecount=0
 
 " Highlight syntax
 syntax on
@@ -148,9 +111,7 @@ set secure
 set fileencodings=ucs-bom,utf-8,cp1251,default,latin1
 
 " Color scheme
-" color desert
-set background=dark
-color solarized
+color peachpuff
 
 " Python syntax options
 let python_highlight_all = 1
@@ -158,8 +119,12 @@ let python_highlight_all = 1
 " Indent commands
 com SpaceIndent :set tabstop=4| set shiftwidth=4| set expandtab
 com TabIndent :set tabstop=8| set shiftwidth=8| set noexpandtab
+" 4 space indent by default
 SpaceIndent
 
 set tags+=~/erlang-tags
 
-vsplit
+" GUI options
+if has("gui_running")
+    vsplit
+endif

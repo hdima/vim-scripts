@@ -1,8 +1,8 @@
 " VIM 7 configuration file
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
-" Last Change:  2012-02-12
-" Version:      0.7
+" Last Change:  2012-02-13
+" Version:      0.8
 
 " Not compatible with Vi
 set nocompatible
@@ -53,7 +53,7 @@ set shortmess+=asWAI
 set showtabline=0
 set wildmenu
 set laststatus=2
-set statusline=%f%=\ %Y\ %c%V,%l/%L\ [%M%n%W]:%{tabpagenr()}
+set statusline=%f%=\ %Y\ %c%V,%l/%L\ %P\ [%M%n%W]:%{tabpagenr()}
 
 set helpheight=12
 set winminheight=0

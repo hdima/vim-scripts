@@ -1,8 +1,7 @@
 " VIM 7 configuration file
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
-" Last Change:  2012-02-13
-" Version:      0.8
+" Last Change:  2012-02-15
 
 " Not compatible with Vi
 set nocompatible
@@ -46,14 +45,18 @@ set nowrap
 set backspace=indent,eol,start
 set nojoinspaces
 
-" Some information is always good 
+" Some information is always good...
 set showfulltag
-set report=0
-set shortmess+=asWAI
-set showtabline=0
+set showcmd
 set wildmenu
 set laststatus=2
 set statusline=%f%=\ %Y\ %c%V,%l/%L\ %P\ [%M%n%W]:%{tabpagenr()}
+
+" ...but not too much
+set report=0
+set shortmess+=asWAI
+set showtabline=0
+set noshowmode
 
 set helpheight=12
 set winminheight=0

@@ -25,7 +25,7 @@ These scripts also included in the Vim distribution.
   commit file
 
 Vim syntax highlighting script for Python
------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Enhanced version of the original Python syntax highlighting script. See also
 `python.vim page on vim.org <http://www.vim.org/scripts/script.php?script_id=790>`_.
@@ -34,3 +34,9 @@ Enhanced version of the original Python syntax highlighting script. See also
   - Vim syntax highlighting for `Python <http://python.org>`_ 2.\*
 - `syntax/python/python3.0.vim <https://github.com/hdima/vim-scripts/blob/master/syntax/python/python3.0.vim>`_
   - Vim syntax highlighting for `Python <http://python.org>`_ 3.\*
+
+Vim compiler plugins
+--------------------
+
+- `compiler/erlang.vim <https://github.com/hdima/vim-scripts/blob/master/compiler/erlang.vim>`_
+  - Vim compiler plugin for `Erlang <http://erlang.org>`_

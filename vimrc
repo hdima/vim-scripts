@@ -1,7 +1,7 @@
 " VIM 7 configuration file
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
-" Last Change:  2012-02-22
+" Last Change:  2012-02-23
 
 " Not compatible with Vi
 set nocompatible
@@ -50,7 +50,7 @@ set showfulltag
 set showcmd
 set wildmenu
 set laststatus=2
-set statusline=%f%=\ %Y\ %c%V,%l/%L\ %P\ [%M%n%W]:%{tabpagenr()}
+set statusline=%f%=\ %Y\ %c%V,%l/%L\ %P\ [%M%n%W]:%{tabpagenr()}/%{tabpagenr('$')}
 
 " ...but not too much
 set report=0

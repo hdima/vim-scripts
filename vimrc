@@ -1,7 +1,7 @@
 " VIM 7 configuration file
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/vimrc
-" Last Change:  2012-02-15
+" Last Change:  2012-02-22
 
 " Not compatible with Vi
 set nocompatible
@@ -9,7 +9,7 @@ set nocompatible
 " GUI options
 if has("gui_running")
     " Make gvim looks more like vim
-    set guioptions+=acghiM
+    set guioptions+=acghi
     set guioptions-=e
     set guioptions-=mrLtT
 
@@ -104,24 +104,19 @@ set updatecount=0
 " It's not an MS Word clone
 set secure
 
-set fileencodings=ucs-bom,utf-8,cp1251,default,latin1
-
 " Color scheme
 color peachpuff
 
 " Highlight syntax
 syntax enable
 
-" Python syntax options
-let python_highlight_all = 1
+filetype plugin indent on
 
 " Indent commands
 com SpaceIndent :set tabstop=4| set shiftwidth=4| set expandtab
 com TabIndent :set tabstop=8| set shiftwidth=8| set noexpandtab
 " 4 space indent by default
 SpaceIndent
-
-set tags+=~/erlang-tags
 
 " GUI options
 if has("gui_running")

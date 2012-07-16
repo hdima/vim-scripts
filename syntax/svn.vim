@@ -20,11 +20,11 @@ elseif exists("b:current_syntax")
 endif
 
 syn region svnRegion    start="^--.*--$" end="\%$" contains=ALL contains=@NoSpell
-syn match svnRemoved    "^D    .*$" contained
-syn match svnRenamed    "^R[ M][ U][ +] .*$" contained
-syn match svnAdded      "^A[ M][ U][ +] .*$" contained
-syn match svnModified   "^M[ M][ U]  .*$" contained
-syn match svnProperty   "^_M[ U]  .*$" contained
+syn match svnRemoved    "^D    .*$" contained contains=@NoSpell
+syn match svnRenamed    "^R[ M][ U][ +] .*$" contained contains=@NoSpell
+syn match svnAdded      "^A[ M][ U][ +] .*$" contained contains=@NoSpell
+syn match svnModified   "^M[ M][ U]  .*$" contained contains=@NoSpell
+syn match svnProperty   "^_M[ U]  .*$" contained contains=@NoSpell
 
 " Synchronization.
 syn sync clear

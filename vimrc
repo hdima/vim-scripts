@@ -48,7 +48,7 @@ set nojoinspaces
 " Some information is always good...
 set showfulltag
 set showcmd
-set wildmenu
+set wildmode=list:longest
 set laststatus=2
 set statusline=%f%=\ %Y\ %c%V,%l/%L\ %P\ [%M%n%W]:%{tabpagenr()}/%{tabpagenr('$')}
 

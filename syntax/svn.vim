@@ -20,7 +20,7 @@ elseif exists("b:current_syntax")
   finish
 endif
 
-syn region svnRegion    start="^--.*--$" end="\%$" contains=svnRemoved,svnRenamed,svnAdded,svnModified,svnProperty,@NoSpell
+syn region svnRegion    end="\%$" matchgroup=svnDelimiter start="^--.*--$" contains=svnRemoved,svnRenamed,svnAdded,svnModified,svnProperty,@NoSpell
 syn match svnRemoved    "^D    .*$" contained contains=@NoSpell
 syn match svnRenamed    "^R[ M][ U][ +] .*$" contained contains=@NoSpell
 syn match svnAdded      "^A[ M][ U][ +] .*$" contained contains=@NoSpell
@@ -43,6 +43,7 @@ if version >= 508 || !exists("did_svn_syn_inits")
   endif
 
   HiLink svnRegion      Comment
+  HiLink svnDelimiter   NonText
   HiLink svnRemoved     Constant
   HiLink svnAdded       Identifier
   HiLink svnModified    Special

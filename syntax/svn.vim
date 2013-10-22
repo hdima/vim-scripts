@@ -20,6 +20,11 @@ elseif exists("b:current_syntax")
   finish
 endif
 
+syn match svnFirstLine  "\%^.*" nextgroup=svnRegion,svnBlank skipnl
+syn match svnSummary    "^.\{0,50\}" contained containedin=svnFirstLine nextgroup=svnOverflow contains=@Spell
+syn match svnOverflow   ".*" contained contains=@Spell
+syn match svnBlank      "^.*" contained contains=@Spell
+
 syn region svnText      start="\%^" end="^--.*--$"me=s-1 contains=@Spell
 
 syn region svnRegion    start="^--.*--$" end="\%$" contains=ALL
@@ -43,6 +48,9 @@ if version >= 508 || !exists("did_svn_syn_inits")
   else
     command -nargs=+ HiLink hi def link <args>
   endif
+
+  HiLink svnSummary     Keyword
+  HiLink svnBlank       Error
 
   HiLink svnRegion      Comment
   HiLink svnRemoved     Constant

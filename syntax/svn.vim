@@ -2,15 +2,18 @@
 " Language:     Subversion (svn) commit file
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/syntax/svn.vim
-" Last Change:  2012-07-21
+" Last Change:  2013-11-05
 " Filenames:    svn-commit*.tmp
-" Version:      1.9
+" Version:      1.10
 
 " Contributors:
-"   Stefano Zacchiroli
+"
+" List of the contributors in alphabetical order:
+"
 "   A. S. Budden
-"   Myk Taylor
 "   Ingo Karkat
+"   Myk Taylor
+"   Stefano Zacchiroli
 
 " For version 5.x: Clear all syntax items.
 " For version 6.x: Quit when a syntax file was already loaded.

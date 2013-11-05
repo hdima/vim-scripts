@@ -24,9 +24,9 @@ elseif exists("b:current_syntax")
 endif
 
 syn match svnFirstLine  "\%^.*" nextgroup=svnRegion,svnBlank skipnl
-syn match svnSummary    "^.\{0,50\}" contained containedin=svnFirstLine nextgroup=svnOverflow contains=@Spell
-syn match svnOverflow   ".*" contained contains=@Spell
-syn match svnBlank      "^.*" contained contains=@Spell
+syn match svnSummary    "^.\{0,50\}" contained containedin=svnFirstLine nextgroup=svnOverflow
+syn match svnOverflow   ".*" contained
+syn match svnBlank      "^.*" contained
 
 syn region svnRegion    end="\%$" matchgroup=svnDelimiter start="^--.*--$" contains=svnRemoved,svnRenamed,svnAdded,svnModified,svnProperty,@NoSpell
 syn match svnRemoved    "^D    .*$" contained contains=@NoSpell

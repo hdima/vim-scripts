@@ -2,7 +2,7 @@
 " Language:     Subversion (svn) commit file
 " Maintainer:   Dmitry Vasiliev <dima at hlabs dot org>
 " URL:          https://github.com/hdima/vim-scripts/blob/master/syntax/svn.vim
-" Last Change:  2013-11-05
+" Last Change:  2013-11-08
 " Filenames:    svn-commit*.tmp
 " Version:      1.10
 
